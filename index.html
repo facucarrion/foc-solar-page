@@ -21,9 +21,8 @@
 
   <header class="header">
     <nav class="header__nav">
-      <a href="#main">
-        <img src="img/white_logo.png" alt="logo" class="header__nav--logo">
-      </a>  
+      <img src="img/white_logo.png" alt="logo" class="header__nav--logo">
+
       <ul class="header__nav--menu">
         <li class="header__nav--menu_articulo"><a href="#main" class="header__nav--menu_articulo">Introducción</a></li>
         <li class="header__nav--menu_articulo"><a href="#aboutus" class="header__nav--menu_articulo">Sobre Nosotros</a></li>
@@ -144,7 +143,50 @@
 
     <section class="contact" id="contact">
       <span class="contact__filter">
+        <span class="contact__container">
+          <span class="contact__adresses">
+            <h2 class="contact__title">
+              Contactos
+            </h2>
 
+            <a href="https://api.whatsapp.com/send?phone=543571552833&app=facebook&entry_point=page_cta&fbclid=IwAR1qItOWEye8QQRYqTMgj5ma5Oqb-1D2sbTQpzwot-9zj8b7_enJ4HRCo-o" target="_blank" class="contact__link">
+              <i class="fa-brands fa-whatsapp contact__icon" style="color: #efefef; font-size: 2em;"></i>
+              <p class="contact__paragraph">
+                +54 9 3571 55-2833
+              </p>
+            </a>
+            <a href="https://www.instagram.com/foc.solar/?hl=es" target="_blank" class="contact__link">
+              <i class="fa-brands fa-instagram contact__icon" style="color: #efefef; font-size: 2em;"></i>
+              <p class="contact__paragraph">
+                @focsolar
+              </p>
+            </a>
+            <a href="https://www.facebook.com/FOCSOLAR/" target="_blank" class="contact__link">
+              <i class="fa-brands fa-facebook contact__icon" style="color: #efefef; font-size: 1.8em;"></i>
+              <p class="contact__paragraph">
+                FOCSOLAR
+              </p>
+            </a>
+            <a href="https://www.google.com.ar/maps/place/R%C3%ADo+Tercero,+C%C3%B3rdoba/@-32.1705733,-64.1408561,14z/data=!3m1!4b1!4m5!3m4!1s0x95cd6f24cc9b6e75:0xf31e908957e0133!8m2!3d-32.1766541!4d-64.1130995" target="_blank" class="contact__link">
+              <i class="fa-solid fa-location-dot contact__icon" style="color: #efefef; font-size: 2.25em;"></i>
+              <p class="contact__paragraph">
+                Río Tercero, Córdoba
+              </p>
+            </a>
+          </span>
+          <form class="contact__form">
+            <h2 class="contact__title">
+              Envíanos un Mail
+            </h2>
+            <label for="" class="contact__label">Nombre Completo:</label>
+            <input type="text" class="contact__input" placeholder="Nombre" autocomplete="off">
+            <label for="" class="contact__label">E-mail:</label>
+            <input type="email" class="contact__input" placeholder="E-Mail" autocomplete="new-email">
+            <label for="" class="contact__label">Mensaje:</label>
+            <textarea class="contact__input contact__input--message" placeholder="Mensaje" rows="5" style="resize: none;" autocomplete="off"></textarea>
+            <input type="submit" value="Enviar" class="contact__submit">
+          </form>
+        </span>
       </span>
     </section>
   </main>
@@ -167,13 +209,13 @@
     <span class="footer__copyright">
       &copy; 2022 Foc Solar
     </span>
-
-    <span class="goup">
-      <a href="#main" class="goup__link">
-        <i class="fa-solid fa-angles-down" style="width: 40px; height: 40px; text-align: center; line-height: 40px; transform: rotate(180deg); color: #efefef;"></i>
-      </a>
-    </span>
   </footer>
+  
+  <span class="goup">
+    <a href="#main" class="goup__link">
+      <i class="fa-solid fa-angles-down" style="width: 40px; height: 40px; text-align: center; line-height: 40px; transform: rotate(180deg); color: #efefef;"></i>
+    </a>
+  </span>
 
 </body>
 

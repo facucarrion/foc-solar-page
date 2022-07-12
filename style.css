@@ -16,7 +16,7 @@ body {
   background-color: #fafafa;
   font-family: Roboto, Monospace;
   scroll-behavior: smooth;
-  scroll-padding: 6.5em;
+  scroll-padding: 6.45em;
 }
 
 * {
@@ -298,6 +298,112 @@ body {
   background-color: rgba(50, 50, 50, 0.7);
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+}
+
+.contact__container {
+  position: relative;
+  width: 60%;
+  height: 60%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3em;
+  background-color: rgba(50, 50, 50, 0.8);
+  padding: 2em;
+  color: #efefef;
+}
+
+.contact__adresses {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact__title {
+  font-weight: 500;
+  margin-bottom: 1em;
+  border-bottom: 2px solid #efefef;
+  padding-bottom: .2em;
+  position: absolute;
+  top: 1em;
+}
+
+.contact__link {
+  text-decoration: none;
+  display: flex;
+  place-items: center;
+  color: #efefef;
+  position: relative;
+  justify-content: space-between;
+  margin-bottom: 1.5em;
+}
+
+.contact__icon {
+  position: relative;
+  left: 0;
+}
+
+.contact__paragraph {
+  font-family: Roboto, sans-serif;
+  font-size: 1.1em;
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.contact__label {
+  font-size: 1.1em;
+  font-family: Roboto, sans-serif;
+  margin-bottom: .5em;
+  font-weight: 500;
+}
+
+.contact__input {
+  background-color: transparent;
+  border: none;
+  padding-bottom: 3px;
+  border-bottom: 1px solid rgba(239, 239, 239, 0.7);
+  margin-bottom: 2em;
+  color: rgba(199, 199, 199, 0.7);
+  display: flex;
+}
+
+.contact__input:focus {
+  outline: none;
+  border-bottom: 1px solid #efefef;
+}
+
+.contact__input:active {
+  outline: none;
+  border-bottom: 1px solid #efefef;
+  background-color: transparent;
+}
+
+.contact__submit {
+  position: absolute;
+  bottom: 1.5em;
+  right: 2em;
+  font-family: Roboto, sans-serif;
+  border: none;
+  background-color: rgba(199, 199, 199, 1);
+  padding: .25em .5em;
+  cursor: pointer;
+}
+
+.contact__submit:hover {
+  background-color: rgba(199, 199, 199, 0.75);
+}
+
+.contact__submit:focus {
+  outline: none;
+}
+
+.contact__submit:active {
+  outline: none;
 }
 
 .footer {
