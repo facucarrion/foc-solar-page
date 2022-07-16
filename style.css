@@ -1,3 +1,5 @@
+/* Global Styles */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -33,6 +35,8 @@ body {
 main {
   width: auto;
 }
+
+/* Header Styles */
 
 .header {
   top: 0;
@@ -113,6 +117,7 @@ main {
   }
 }
 
+/* Main Styles */
 
 .main {
   position: relative;
@@ -124,7 +129,7 @@ main {
   align-items: center;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 1350px) {
   .main {
     width: 100vw;
     max-width: 100vw;
@@ -140,7 +145,7 @@ main {
 
 .main__container--conlogo {
   position: relative;
-  width: 50%;
+  width: 40%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -177,11 +182,12 @@ main {
   padding-bottom: 1em;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 1350px) {
   .main__container {
+    position: relative;
     flex-direction: column;
     height: 75%;
-    width: 90%;
+    width: 40%;
     gap: 2em;
   }
 
@@ -191,9 +197,21 @@ main {
   }
 
   .main__container--conlogo {
-    align-self: center;
+    align-self: flex-start;
   }
 }
+
+@media screen and (max-width: 1000px) {
+  .main__container {
+    width: 80%;
+  }
+
+  .main__container--conlogo {
+    width: 28%;
+  }
+}
+
+/* About Us Styles */
 
 .aboutus {
   position: relative;
@@ -262,6 +280,8 @@ main {
   }
 }
 
+/* Works Styles */
+
 .works {
   width: 100%;
   height: 90vh;
@@ -272,7 +292,7 @@ main {
   gap: 2em;
 }
 
-@media screen and (max-width: 1070px) {
+@media screen and (max-width: 900px) {
   .works {
     width: 100vw;
     max-width: 100vw;
@@ -294,8 +314,9 @@ main {
 }
 
 .works__instalations {
-  height: 60%;
+  min-height: auto;
   width: 80%;
+  min-width: 80%;
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
@@ -304,20 +325,25 @@ main {
 .works__article {
   position: relative;
   height: auto;
-  width: 22%;
+  width: 23%;
+  min-width: 20%;
   background-color: #e6e6e6;
   box-shadow: 0px 0px 15px #737373;
   padding: 1em;
   display: flex;
+  gap: 2em;
   flex-direction: column;
-  justify-content: space-around;
+  object-fit: scale-down;
 }
 
 .works__image {
+  max-height: 80%;
   width: 100%;
+  object-fit: scale-down;
 }
 
 .works__description {
+  max-height: 25%;
   font-size: 1.5em;
   text-align: center;
 }
@@ -325,15 +351,18 @@ main {
 @media screen and (max-width: 900px) {
 
   .works__article {
-    width: 100%;
+    width: 50%;
     gap: 1em;
   }
 
   .works__instalations {
     flex-direction: column;
     gap: 2em;
+    align-items: center;
   }
 }
+
+/* Contact Styles */
 
 .contact {
   position: relative;
@@ -363,8 +392,8 @@ main {
 
 .contact__container {
   position: relative;
-  width: 60%;
-  height: 60%;
+  width: 90%;
+  height: 68%;
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 3em;
@@ -471,7 +500,7 @@ main {
   outline: none;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 865px) {
   .contact {
     height: auto;
     width: 100vw;
@@ -491,6 +520,8 @@ main {
     top: 0;
   }
 }
+
+/* Footer Styles */
 
 .footer {
   position: relative;
