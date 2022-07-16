@@ -13,12 +13,10 @@ html,
 body {
   max-width: 100vw;
   min-height: 100vh;
-  overflow-y: scroll;
-  overflow-x: hidden;
   background-color: #fafafa;
   font-family: Roboto, Monospace;
   scroll-behavior: smooth;
-  scroll-padding: 6.45em;
+  scroll-padding: 6.5em;
 }
 
 @media (max-width: 650px) {
@@ -47,7 +45,6 @@ main {
 }
 
 .header__nav {
-  position: sticky;
   width: 100vw;
   height: 6.5em;
   display: flex;
@@ -66,13 +63,13 @@ main {
 .header__nav--menu {
   position: relative;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   list-style: none;
   font-family: Roboto;
   font-weight: 500;
   padding: 0;
-  width: 40%;
+  width: auto;
+  gap: 2em;
 }
 
 .header__nav--menu_articulo {
@@ -270,7 +267,7 @@ main {
   gap: 2em;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 1070px) {
   .works {
     width: 100vw;
     max-width: 100vw;
@@ -301,10 +298,10 @@ main {
 
 .works__article {
   position: relative;
-  height: 100%;
+  height: auto;
   width: 22%;
   background-color: #e6e6e6;
-  box-shadow: 0px 0px 7px #737373;
+  box-shadow: 0px 0px 15px #737373;
   padding: 1em;
   display: flex;
   flex-direction: column;
@@ -320,15 +317,16 @@ main {
   text-align: center;
 }
 
-@media (max-width: 650px) {
-  .works__instalations {
-    flex-direction: column;
-    gap: 2em;
-  }
+@media (max-width: 900px) {
 
   .works__article {
     width: 100%;
     gap: 1em;
+  }
+
+  .works__instalations {
+    flex-direction: column;
+    gap: 2em;
   }
 }
 
