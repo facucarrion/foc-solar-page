@@ -69,7 +69,7 @@ main {
   font-weight: 500;
   padding: 0;
   width: auto;
-  gap: 2em;
+  gap: 3em;
 }
 
 .header__nav--menu_articulo {
@@ -289,7 +289,7 @@ main {
   flex-direction: column;
   place-items: center;
   justify-content: center;
-  gap: 2em;
+  gap: 3em;
 }
 
 @media screen and (max-width: 900px) {
