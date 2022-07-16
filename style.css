@@ -13,15 +13,31 @@ html,
 body {
   max-width: 100vw;
   min-height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
   background-color: #fafafa;
   font-family: Roboto, Monospace;
   scroll-behavior: smooth;
   scroll-padding: 6.45em;
 }
 
+@media (max-width: 650px) {
+
+  html,
+  body {
+    width: 100vw;
+    max-width: 100vw;
+    scroll-padding: 6.5em;
+  }
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
+}
+
+main {
+  width: auto;
 }
 
 .header {
@@ -32,7 +48,7 @@ body {
 
 .header__nav {
   position: sticky;
-  width: 100%;
+  width: 100vw;
   height: 6.5em;
   display: flex;
   align-items: center;
@@ -73,6 +89,29 @@ body {
   border-bottom: 1px solid #efefef;
 }
 
+@media (max-width: 650px) {
+  .header {
+    width: auto;
+  }
+
+  .header__nav {
+    max-width: 100vh;
+    height: 6.5em;
+    padding: 1em 1.5em;
+  }
+
+  .header__nav--menu {
+    width: auto;
+    height: 2.2em;
+    gap: 2.2em;
+  }
+
+  .header__nav--menu_articulo {
+    flex-wrap: wrap;
+
+  }
+}
+
 .main {
   position: relative;
   width: 100%;
@@ -81,6 +120,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 650px) {
+  .main {
+    width: 100vw;
+    max-width: 100vw;
+  }
 }
 
 .main__container {
@@ -129,6 +175,24 @@ body {
   padding-bottom: 1em;
 }
 
+@media (max-width: 650px) {
+  .main__container {
+    flex-direction: column;
+    height: 75%;
+    width: 90%;
+    gap: 2em;
+  }
+
+  .main__container--info {
+    margin-left: 0;
+    padding: 0;
+  }
+
+  .main__container--conlogo {
+    align-self: center;
+  }
+}
+
 .aboutus {
   position: relative;
   width: 100%;
@@ -136,10 +200,17 @@ body {
   display: flex;
   place-items: center;
   justify-content: center;
-  background-image: url(img/valle-encantado/vista1.png);
+  background-image: url(img/vista1.png);
   background-repeat: no-repeat;
   background-size: cover;
   border-bottom: 2px solid #c7c7c7;
+}
+
+@media (max-width: 650px) {
+  .aboutus {
+    width: 100vw;
+    max-width: 100vw;
+  }
 }
 
 .aboutus__info {
@@ -150,7 +221,6 @@ body {
   background-color: rgba(50, 50, 50, 0.7);
   flex-direction: column;
   justify-content: center;
-
 }
 
 .aboutus__info--title {
@@ -177,6 +247,19 @@ body {
   font-weight: 550;
 }
 
+@media (max-width: 650px) {
+
+  .aboutus__info {
+    align-items: center;
+  }
+
+  .aboutus__info--title,
+  .aboutus__info--paragraph {
+    width: 80%;
+    left: 0;
+  }
+}
+
 .works {
   width: 100%;
   height: 90vh;
@@ -187,17 +270,18 @@ body {
   gap: 2em;
 }
 
-.works__info {
-  width: 90%;
-  height: 70%;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2em;
+@media (max-width: 650px) {
+  .works {
+    width: 100vw;
+    max-width: 100vw;
+    height: auto;
+    padding: 2em 0;
+  }
 }
 
-.works__info--title {
+.works__title {
   display: inline-block;
-  width: 90%;
+  width: 80%;
   color: #252525;
   font-size: 2rem;
   letter-spacing: .075em;
@@ -207,79 +291,45 @@ body {
   text-align: center;
 }
 
-.works__info--article {
-  background-color: #E1E1E2;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1em;
-}
-
-.works__info--bigimage {
-  position: relative;
-  height: 50%;
-  width: 90%;
-  object-fit: cover;
-}
-
-.works__info--smallimagecontainer {
-  position: relative;
-  height: 17%;
-  width: 90%;
+.works__instalations {
+  height: 60%;
+  width: 80%;
   display: flex;
   justify-content: space-between;
-  object-fit: cover;
+  flex-wrap: nowrap;
 }
 
-.works__info--smallimage,
-.works__info--moreinformation {
+.works__article {
   position: relative;
   height: 100%;
-  width: 30%;
-  object-fit: cover;
-}
-
-.works__info--moreinformation {
-  opacity: 0.75;
-}
-
-.works__info--moreinformation:hover {
-  opacity: 1;
-}
-
-.works__info--plus {
-  z-index: 20;
-  background-color: rgba(50, 50, 50, 0.7);
-  position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 22%;
+  background-color: #e6e6e6;
+  box-shadow: 0px 0px 7px #737373;
+  padding: 1em;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
-.works__info--moreimage {
-  position: absolute;
+.works__image {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-
 }
 
-.works__info--moreicon {
-  position: relative;
-  width: 50%;
-  height: auto;
-  opacity: 0.75;
-}
-
-.works__info--artitle {
-  position: relative;
+.works__description {
+  font-size: 1.5em;
   text-align: center;
-  height: 2rem;
-  width: 85%;
+}
+
+@media (max-width: 650px) {
+  .works__instalations {
+    flex-direction: column;
+    gap: 2em;
+  }
+
+  .works__article {
+    width: 100%;
+    gap: 1em;
+  }
 }
 
 .contact {
@@ -288,6 +338,13 @@ body {
   height: 90vh;
   background-image: url(img/contact-background.png);
   background-size: cover;
+}
+
+@media (max-width: 650px) {
+  .contact {
+    width: 100vw;
+    max-width: 100vw;
+  }
 }
 
 .contact__filter {
@@ -411,6 +468,27 @@ body {
   outline: none;
 }
 
+@media (max-width: 650px) {
+  .contact {
+    height: auto;
+    width: 100vw;
+    max-width: 100vw;
+  }
+
+  .contact__container {
+    width: 80%;
+    gap: 1em;
+    grid-template-columns: none;
+    grid-template-rows: 1fr 1fr;
+    margin: 4em auto;
+  }
+
+  .contact__title {
+    position: relative;
+    top: 0;
+  }
+}
+
 .footer {
   position: relative;
   height: 6.5em;
@@ -421,6 +499,13 @@ body {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+}
+
+@media (max-width: 650px) {
+  .footer {
+    width: 100vw;
+    max-width: 100vw;
+  }
 }
 
 .footer__logo {
