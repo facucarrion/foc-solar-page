@@ -27,5 +27,5 @@ $btnOpen.addEventListener('click', () => {
 $btnClose.addEventListener('click', () => {
   $btnOpen.style.display = 'block';
   $btnClose.style.display = 'none';
-  $menu.style.transform = 'translateX(300px)';
+  $menu.style.transform = 'translateX(400px)';
 })
