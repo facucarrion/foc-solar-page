@@ -335,7 +335,12 @@ body {
   color: #efefef;
   position: relative;
   justify-content: space-between;
+  padding: .25em .5em;
   margin-bottom: 1.5em;
+}
+
+.contact__link:hover {
+  border-bottom: 2px solid #efefef;
 }
 
 .contact__icon {
