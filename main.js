@@ -17,10 +17,6 @@ function handleSubmit(event) {
 const $btnOpen = document.getElementById('open');
 const $btnClose = document.getElementById('close');
 const $menu = document.querySelector('.header__nav--menu');
-const $menuArticle1 = document.querySelector('.header__nav--menu_articulo-1');
-const $menuArticle2 = document.querySelector('.header__nav--menu_articulo-2');
-const $menuArticle3 = document.querySelector('.header__nav--menu_articulo-3');
-const $menuArticle4 = document.querySelector('.header__nav--menu_articulo-4');
 
 $btnOpen.addEventListener('click', () => {
   $btnOpen.style.display = 'none';
@@ -39,22 +35,6 @@ $btnClose.addEventListener('click', () => {
 window.onresize = () => {
   window.outerWidth < 650 ? $menu.style.transform = 'scale(0, 1)' : $menu.style.transform = 'scale(1, 1)';
 };
-
-$menuArticle1.addEventListener('click', () => {
-  $btnClose.click();
-});
-
-$menuArticle2.addEventListener('click', () => {
-  $btnClose.click();
-});
-
-$menuArticle3.addEventListener('click', () => {
-  $btnClose.click();
-});
-
-$menuArticle4.addEventListener('click', () => {
-  $btnClose.click();
-});
 
 // Smooth Cursor
 
