@@ -18,8 +18,7 @@ body {
   min-height: 100vh;
   background-color: #fafafa;
   font-family: Roboto, Monospace;
-  scroll-padding: 6.5em;
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
 }
 
 @media screen and (max-width: 650px) {
@@ -71,7 +70,8 @@ main {
   gap: 3em;
 }
 
-.header__nav--menu_articulo {
+.header__nav--menu_articulo,
+.header__nav--menu_articulo-a {
   display: flex;
   position: relative;
   color: white;
