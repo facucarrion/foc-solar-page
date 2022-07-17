@@ -14,21 +14,19 @@
 
 html,
 body {
-  max-width: 100vw;
+  max-width: 100%;
   min-height: 100vh;
   background-color: #fafafa;
   font-family: Roboto, Monospace;
-  scroll-behavior: smooth;
-  scroll-padding: 6.5em;
+  /* scroll-padding: 6.5em; */
 }
 
 @media screen and (max-width: 650px) {
 
   html,
   body {
-    width: 100vw;
-    max-width: 100vw;
-    scroll-padding: 6.5em;
+    width: 100%;
+    max-width: 100%;
   }
 }
 
@@ -45,7 +43,7 @@ main {
 }
 
 .header__nav {
-  width: 100vw;
+  width: 100%;
   height: 6.5em;
   display: flex;
   align-items: center;
@@ -131,8 +129,8 @@ main {
 
 @media screen and (max-width: 1350px) {
   .main {
-    width: 100vw;
-    max-width: 100vw;
+    width: 100%;
+    max-width: 100%;
   }
 }
 
@@ -228,8 +226,8 @@ main {
 
 @media screen and (max-width: 650px) {
   .aboutus {
-    width: 100vw;
-    max-width: 100vw;
+    width: 100%;
+    max-width: 100%;
   }
 }
 
@@ -294,8 +292,8 @@ main {
 
 @media screen and (max-width: 900px) {
   .works {
-    width: 100vw;
-    max-width: 100vw;
+    width: 100%;
+    max-width: 100%;
     height: auto;
     padding: 2em 0;
   }
@@ -367,15 +365,15 @@ main {
 .contact {
   position: relative;
   width: 100%;
-  height: 90vh;
+  height: calc(90vh - 6.5em);
   background-image: url(img/contact-background.png);
   background-size: cover;
 }
 
 @media screen and (max-width: 650px) {
   .contact {
-    width: 100vw;
-    max-width: 100vw;
+    width: 100%;
+    max-width: 100%;
   }
 }
 
@@ -503,8 +501,8 @@ main {
 @media screen and (max-width: 865px) {
   .contact {
     height: auto;
-    width: 100vw;
-    max-width: 100vw;
+    width: 100%;
+    max-width: 100%;
   }
 
   .contact__container {
@@ -537,8 +535,8 @@ main {
 
 @media screen and (max-width: 650px) {
   .footer {
-    width: 100vw;
-    max-width: 100vw;
+    width: 100%;
+    max-width: 100%;
   }
 }
 

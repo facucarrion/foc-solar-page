@@ -1,0 +1,9 @@
+más relleno en main, cosas más grandes
+	- más grande las cosas
+
+contact, escalado de pagina
+	- mejorar animación de adresses
+	- mostrar footer
+
+hover en goup, mas oscuro
+	- animación de mas grande
