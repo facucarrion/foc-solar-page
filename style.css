@@ -391,7 +391,7 @@ main {
 .contact__container {
   position: relative;
   width: 90%;
-  height: 68%;
+  height: 80%;
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 3em;
