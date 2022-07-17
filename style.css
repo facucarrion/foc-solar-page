@@ -18,7 +18,8 @@ body {
   min-height: 100vh;
   background-color: #fafafa;
   font-family: Roboto, Monospace;
-  /* scroll-padding: 6.5em; */
+  scroll-padding: 6.5em;
+  scroll-behavior: smooth;
 }
 
 @media screen and (max-width: 650px) {
@@ -326,7 +327,7 @@ main {
   width: 23%;
   min-width: 20%;
   background-color: #e6e6e6;
-  box-shadow: 0px 0px 15px #737373;
+  box-shadow: 0px 0px 11px -1px rgba(0, 0, 0, 0.75);
   padding: 1em;
   display: flex;
   gap: 2em;
