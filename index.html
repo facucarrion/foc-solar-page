@@ -50,7 +50,7 @@
         </span>  
         <span class="main__container--info">
           <h2 class="main__container--title">
-            FOC SOLAR
+            FOC Solar
           </h2>
           <p class="main__container--paragraph">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde, rerum voluptate? A eaque, fugiat delectus natus officia vitae. Aperiam totam voluptatem debitis ducimus. Magni inventore, ut minus quos commodi sapiente, maxime consectetur cupiditate, nostrum adipisci odio vel. Id delectus facilis totam sapiente quo facere provident, ab doloremque fugiat, amet ipsam!
@@ -142,12 +142,33 @@
             <h2 class="contact__title">
               Envíanos un Mail
             </h2>
-            <label for="name" class="contact__label">Nombre Completo:</label>
-            <input name="name" type="text" class="contact__input" id="name" placeholder="Nombre" autocomplete="new">
-            <label for="email" class="contact__label">Dirección de Correo Electrónico:</label>
-            <input name="email" type="email" class="contact__input" id="email" placeholder="E-Mail" autocomplete="new-email">
-            <label for="message" class="contact__label">Mensaje:</label>
-            <textarea name="message" class="contact__input contact__input--message" id="message" placeholder="Mensaje" rows="5" style="resize: none;" autocomplete="off"></textarea>
+            <span class="contact__conteinput">
+              <input name="name" type="text" class="contact__input" id="name" autocomplete="new" required>
+              <label for="name" class="contact__label">
+                <span class="contact__label-s">
+                  Nombre
+                </span>
+              </label>
+            </span>
+
+            <span class="contact__conteinput">
+              <input name="email" type="email" class="contact__input" id="email" autocomplete="new-email" required>
+              <label for="email" class="contact__label">
+                <span class="contact__label-s">
+                  Correo Electrónico
+                </span>
+              </label>
+            </span>
+
+            <span class="contact__conteinput contact__conteinput--message">
+              <textarea name="message" class="contact__input--message" id="message" rows="5" autocomplete="off" required></textarea>
+              <label for="message" class="contact__label contact__label--message">
+                <span class="contact__label-s contact__label-s_message">
+                  Mensaje
+                </span>
+              </label>
+            </span>
+
             <input type="submit" value="Enviar" class="contact__submit">
             <a href="" target="_blank" id="mailto"></a>
           </form>
