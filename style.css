@@ -424,6 +424,7 @@ main {
   justify-content: space-between;
   padding: .25em .5em;
   margin-bottom: 1.5em;
+  border-bottom: 2px solid rgba(239, 239, 239, 0);
 }
 
 .contact__link:hover {
