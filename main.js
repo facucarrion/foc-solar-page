@@ -25,14 +25,20 @@ const $menuArticle4 = document.querySelector('.header__nav--menu_articulo-4');
 $btnOpen.addEventListener('click', () => {
   $btnOpen.style.display = 'none';
   $btnClose.style.display = 'block';
-  $menu.style.transform = 'translateX(0)';
+  $menu.style.transform = 'scale(1, 1)';
+  $menu.style.transformOrigin = 'right';
 });
 
 $btnClose.addEventListener('click', () => {
   $btnOpen.style.display = 'block';
   $btnClose.style.display = 'none';
-  $menu.style.transform = 'translateX(400px)';
+  $menu.style.transform = 'scale(0, 1)';
+  $menu.style.transformOrigin = 'right';
 });
+
+window.onresize = () => {
+  window.outerWidth < 650 ? $menu.style.transform = 'scale(0, 1)' : $menu.style.transform = 'scale(1, 1)';
+};
 
 $menuArticle1.addEventListener('click', () => {
   $btnClose.click();
@@ -52,9 +58,9 @@ $menuArticle4.addEventListener('click', () => {
 
 // Smooth Cursor
 
-$(document).ready(function(){
+$(document).ready(function () {
   // Add smooth scrolling to all links
-  $("a").on('click', function(event) {
+  $("a").on('click', function (event) {
 
     // Make sure this.hash has a value before overriding default behavior
     if (this.hash !== "") {
@@ -67,8 +73,8 @@ $(document).ready(function(){
       // Using jQuery's animate() method to add smooth page scroll
       // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
       $('*').animate({
-        scrollTop: $(hash).offset().top-hashWidth
-      }, 500, function(){
+        scrollTop: $(hash).offset().top - hashWidth
+      }, 500, function () {
 
         // Add hash (#) to URL when done scrolling (default click behavior)
         // window.location.hash = hash;
@@ -76,3 +82,33 @@ $(document).ready(function(){
     }; // End if
   });
 });
+
+// Go Up Button
+
+document.getElementById("button-up").addEventListener("click", scrollUp);
+
+function scrollUp() {
+
+  var currentScroll = document.documentElement.scrollTop;
+
+  if (currentScroll > 0) {
+    window.requestAnimationFrame(scrollUp);
+    window.scrollTo(0, currentScroll - (currentScroll / 7.5));
+    buttonUpp.style.transform = "scale(0)";
+  }
+};
+
+buttonUpp = document.getElementById("button-up");
+
+window.onscroll = function () {
+  var scroll = document.documentElement.scrollTop;
+
+  if (scroll > 200) {
+
+    buttonUpp.style.transform = "scale(1)";
+
+  } else if (scroll < 100) {
+
+    buttonUpp.style.transform = "scale(0)";
+  }
+};
