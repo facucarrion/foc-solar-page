@@ -79,6 +79,7 @@ main {
   font-size: 1.05rem;
   font-weight: 500;
   flex-wrap: nowrap;
+  border-bottom: 1px solid rgba(239, 239, 239, 0);
 }
 
 .header__nav--menu_articulo:hover {
