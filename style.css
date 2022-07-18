@@ -101,6 +101,8 @@ main {
   font-weight: 500;
   flex-wrap: nowrap;
   border-bottom: 2px solid rgba(239, 239, 239, 0);
+  transition: all 500ms ease;
+  padding: 0 .05em;
 }
 
 .header__nav--menu_articulo:hover {
