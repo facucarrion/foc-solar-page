@@ -33,7 +33,9 @@ $btnClose.addEventListener('click', () => {
 });
 
 window.onresize = () => {
-  window.outerWidth < 650 ? $menu.style.transform = 'scale(0, 1)' : $menu.style.transform = 'scale(1, 1)';
+  window.outerWidth < 900 ? $menu.style.transform = 'scale(0, 1)' : $menu.style.transform = 'scale(1, 1)';
+  $btnOpen.style.display = 'block';
+  $btnClose.style.display = 'none';
 };
 
 // Smooth Cursor

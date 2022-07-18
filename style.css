@@ -122,7 +122,7 @@ main {
     background: rgba(60, 60, 60, 0.77);
     width: 45%;
     transform: translateX(400px);
-    transition: all 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
   }
 
   .header__icons {
@@ -400,6 +400,7 @@ main {
   .contact {
     width: 100%;
     max-width: 100%;
+    height: 120vh;
   }
 }
 
@@ -417,7 +418,7 @@ main {
 .contact__container {
   position: relative;
   width: 90%;
-  height: 80%;
+  height: 90%;
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 3em;
@@ -471,7 +472,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 1.25em;
+  gap: 1em;
 }
 
 .contact__conteinput {
@@ -604,9 +605,9 @@ main {
 
   .contact__container {
     width: 80%;
-    gap: 1em;
+    gap: 0;
     grid-template-columns: none;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1.25fr;
     margin: 4em auto;
   }
 
