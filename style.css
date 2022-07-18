@@ -548,13 +548,13 @@ main {
 }
 
 .contact__input:focus+.contact__label .contact__label-s,
-.contact__input:valid+.contact__label .contact__label-s_message {
+.contact__input:valid+.contact__label .contact__label-s {
   transform: translateY(-150%);
   font-size: .9em;
   color: #f17d3e
 }
 
-.contact__input--message:focus+.contact__label .contact__label-s,
+.contact__input--message:focus+.contact__label .contact__label-s_message,
 .contact__input--message:valid+.contact__label .contact__label-s_message {
   transform: translateY(-6.6em);
   font-size: .9em;
