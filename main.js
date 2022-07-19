@@ -7,7 +7,9 @@ $form.addEventListener('submit', handleSubmit);
 
 function handleSubmit(event) {
   event.preventDefault();
+
   const form = new FormData(this);
+  
   $buttonMailto.setAttribute('href', `mailto:focsolar@gmail.com?subject=${form.get('name')}&body=${form.get('message')}`);
   $buttonMailto.click();
 };
@@ -43,23 +45,15 @@ window.onresize = () => {
 $(document).ready(function () {
   // Add smooth scrolling to all links
   $("a").on('click', function (event) {
-
-    // Make sure this.hash has a value before overriding default behavior
     if (this.hash !== "") {
-      // Prevent default anchor click behavior
       event.preventDefault();
 
-      // Store hash
       const hash = this.hash;
       const hashWidth = document.querySelector(`.header`).scrollHeight;
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+
       $('*').animate({
         scrollTop: $(hash).offset().top - hashWidth
-      }, 700, function () {
-
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        // window.location.hash = hash;
+      }, 700, function () {        
       });
     }; // End if
   });
@@ -70,7 +64,6 @@ $(document).ready(function () {
 document.getElementById("button-up").addEventListener("click", scrollUp);
 
 function scrollUp() {
-
   var currentScroll = document.documentElement.scrollTop;
 
   if (currentScroll > 0) {
@@ -83,16 +76,10 @@ function scrollUp() {
 buttonUpp = document.getElementById("button-up");
 
 window.onscroll = function () {
-  var scroll = document.documentElement.scrollTop;
+  let scroll = document.documentElement.scrollTop;
 
-  if (scroll > 200) {
-
-    buttonUpp.style.transform = "scale(1)";
-
-  } else if (scroll < 100) {
-
-    buttonUpp.style.transform = "scale(0)";
-  }
+  if (scroll > 200) buttonUpp.style.transform = "scale(1)";
+  else if (scroll < 100) buttonUpp.style.transform = "scale(0)";
 };
 
 // Social Links Hover
