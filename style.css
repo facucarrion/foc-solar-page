@@ -258,7 +258,7 @@ main {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position-x: center;
-  background-size: 120%;
+  background-size: cover;
   border-bottom: 2px solid #c7c7c7;
 }
 
@@ -622,7 +622,7 @@ main {
   height: 5em;
   text-align: center;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
 }
 
