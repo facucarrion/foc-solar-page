@@ -256,9 +256,9 @@ main {
   justify-content: center;
   background-image: url(img/vista1.png);
   background-repeat: no-repeat;
+  background-size: cover;
   background-attachment: fixed;
   background-position-x: center;
-  background-size: cover;
   border-bottom: 2px solid #c7c7c7;
 }
 
