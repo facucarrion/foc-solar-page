@@ -233,7 +233,8 @@ main {
   }
 
   .main__container--conlogo {
-    width: 220px;
+    max-width: 230px;
+    min-width: 200px;
   }
 }
 
@@ -402,6 +403,12 @@ main {
   }
 }
 
+@media screen and (max-width: 400px) {
+  .works__instalations {
+    width: 90%;
+  }
+}
+
 /* Contact Styles */
 
 .contact {
@@ -436,7 +443,7 @@ main {
 .contact__container {
   position: relative;
   width: 70%;
-  min-height: 65%;
+  min-height: 70%;
   display: flex;
   background-color: rgba(50, 50, 50, 0.8);
   padding: 2em;
@@ -648,7 +655,7 @@ main {
 @media screen and (max-width: 560px) {
 
   .footer {
-    gap: 0;
+    gap: 1em;
   }
 
   .footer__info,
@@ -660,10 +667,26 @@ main {
 
 @media screen and (max-width: 430px) {
 
+  .footer {
+    gap: 1em;
+  }
+
   .footer__info,
   .footer__links {
     font-size: .7em;
     min-width: 180px;
+  }
+
+  .footer__container {
+    flex-direction: column;
+    gap: 1em;
+    height: auto;
+  }
+}
+
+@media screen and (max-height: 820px) {
+  .contact__container {
+    height: 90%;
   }
 }
 
@@ -686,7 +709,7 @@ main {
   -ms-flex-align: center;
   align-items: center;
   position: fixed;
-  bottom: 12px;
+  bottom: 25px;
   left: 25px;
   cursor: pointer;
   border: 3px solid transparent;
