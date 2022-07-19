@@ -1,5 +1,6 @@
-/* Global Styles */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Global Styles */
 
 :root {
   --primary-color: #f17d3e;
@@ -93,6 +94,7 @@ main {
 
 .header__nav--menu_articulo,
 .header__nav--menu_articulo-a {
+  font-family: 'Poppins', sans-serif;
   display: flex;
   position: relative;
   color: white;
@@ -145,7 +147,7 @@ main {
 .main {
   position: relative;
   width: 100%;
-  height: 90vh;
+  height: calc(100vh - 6.5em);
   border-bottom: 2px solid #efefef;
   display: flex;
   justify-content: center;
@@ -231,7 +233,7 @@ main {
   }
 
   .main__container--conlogo {
-    width: 28%;
+    width: 220px;
   }
 }
 
@@ -240,12 +242,13 @@ main {
 .aboutus {
   position: relative;
   width: 100%;
-  height: 90vh;
+  height: calc(100vh - 6.4em);
   display: flex;
   place-items: center;
   justify-content: center;
   background-image: url(img/vista1.png);
   background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
   border-bottom: 2px solid #c7c7c7;
 }
@@ -274,8 +277,8 @@ main {
   width: 40%;
   padding-bottom: 0.5em;
   color: #efefef;
-  font-size: 2rem;
-  font-weight: 500;
+  font-size: 2.25rem;
+  font-weight: 600;
   border-bottom: 2px solid #efefef;
 }
 
@@ -307,12 +310,12 @@ main {
 
 .works {
   width: 100%;
-  height: 90vh;
+  height: calc(100vh - 6.5em);
   display: flex;
   flex-direction: column;
   place-items: center;
   justify-content: center;
-  gap: 4.5em;
+  gap: 3.5em;
 }
 
 @media screen and (max-width: 1040px) {
@@ -404,9 +407,12 @@ main {
 .contact {
   position: relative;
   width: 100%;
-  height: calc(90vh - 6.5em);
+  height: 100vh;
   background-image: url(img/contact-background.png);
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 120%;
+  background-attachment: fixed;
+  background-position: center center;
 }
 
 .contact__filter {
@@ -421,28 +427,33 @@ main {
 }
 
 .contact__title {
+  position: absolute;
+  top: .75em;
   font-size: 2.25rem;
   color: #f8f8f8;
 }
 
 .contact__container {
   position: relative;
-  width: 60%;
-  height: 90%;
+  width: 70%;
+  min-height: 65%;
   display: flex;
-  gap: 3em;
   background-color: rgba(50, 50, 50, 0.8);
   padding: 2em;
   color: #efefef;
+  margin-top: 1500px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3em;
 }
 
-.contact__form {
+/* .contact__form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 3em;
   width: 100%;
-}
+} */
 
 .contact__conteinput {
   width: 100%;
@@ -565,24 +576,30 @@ main {
   outline: none;
 }
 
-@media screen and (max-width: 650px) {
-  .contact__container {
-    width: 70%;
-  }
-}
-
 /* Footer Styles */
 
 .footer {
   position: relative;
-  height: 6.5em;
+  height: auto;
+  padding: 2em 0;
   width: 100%;
   background-color: #252525;
   color: #efefef;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  gap: 2em;
+}
+
+.footer__title {
+  color: #cfcfcf;
+  font-size: 1.2em;
+  font-weight: 600;
+  width: 100%;
+  padding: 0 .2em;
+  padding-bottom: .2em;
+  border-bottom: 1px solid #efefef;
+  text-align: left;
 }
 
 @media screen and (max-width: 650px) {
@@ -592,25 +609,70 @@ main {
   }
 }
 
-.footer__logo {
-  position: relative;
-  width: 25%;
-  text-align: center;
-}
-
-.footer__logo--img {
-  height: 60px;
-}
-
 .footer__container {
   font-size: 1.25em;
   position: relative;
-  width: 75%;
+  width: 100%;
+  height: 5em;
   text-align: center;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
+
+.footer__info,
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  height: 100%;
+  min-width: 250px;
+  align-items: center;
+  gap: .5em;
+}
+
+.footer__link {
+  width: 98%;
+  display: flex;
+  justify-content: space-between;
+  font-size: .9em;
+  font-weight: 300;
+  text-decoration: none;
+  color: rgba(239, 239, 239, 0.6);
+  border-bottom: 2px solid transparent;
+  padding: 0 .1em;
+  padding-bottom: .15em;
+  transition: all 500ms ease;
+}
+
+.footer__links .footer__link:hover {
+  color: var(--primary-color);
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 560px) {
+
+  .footer {
+    gap: 0;
+  }
+
+  .footer__info,
+  .footer__links {
+    font-size: .8em;
+    min-width: 200px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+
+  .footer__info,
+  .footer__links {
+    font-size: .7em;
+    min-width: 180px;
+  }
+}
+
+/* Go Up Button */
 
 .button-up {
   width: 50px;
@@ -629,7 +691,7 @@ main {
   -ms-flex-align: center;
   align-items: center;
   position: fixed;
-  bottom: 25px;
+  bottom: 12px;
   left: 25px;
   cursor: pointer;
   border: 3px solid transparent;
@@ -643,8 +705,4 @@ main {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
   background-color: rgba(197, 102, 51, 0.8);
-}
-
-* {
-  font-family: "Poppins";
 }

@@ -1,6 +1,20 @@
+// Parallax Effect
+
+const $contactBackground = document.getElementById('contact');
+const $contactForm = document.getElementById('contactspan');
+
+window.addEventListener('scroll', () => {
+
+  let offset = window.pageYOffset || document.documentElement.scrollTop;
+
+  $contactBackground.style.backgroundPositionY = '-' + offset * 0.04 + 'px';
+  $contactForm.style.marginBottom = offset * 0.6 + 'px';
+  
+});
+
 // Mailto
 
-const $form = document.querySelector('#contactform');
+const $form = document.querySelector('#contactspan');
 const $buttonMailto = document.querySelector('#mailto');
 
 $form.addEventListener('submit', handleSubmit);
@@ -76,7 +90,7 @@ function scrollUp() {
   if (currentScroll > 0) {
     window.requestAnimationFrame(scrollUp);
     window.scrollTo(0, currentScroll - (currentScroll / 7.5));
-    buttonUpp.style.transform = "scale(0)";
+    buttonUpp.style.transform = "scale(1)";
   }
 };
 
