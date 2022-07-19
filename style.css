@@ -252,7 +252,7 @@ main {
   width: 100%;
   height: calc(100vh - 6.4em);
   display: flex;
-  place-items: center;
+  align-items: center;
   justify-content: center;
   background-image: url(img/vista1.png);
   background-repeat: no-repeat;
