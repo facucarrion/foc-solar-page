@@ -257,7 +257,8 @@ main {
   background-image: url(img/vista1.png);
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: cover;
+  background-position-x: center;
+  background-size: 110%;
   border-bottom: 2px solid #c7c7c7;
 }
 
@@ -426,6 +427,7 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  background-position-x: center;
 }
 
 .contact__filter {
