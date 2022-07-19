@@ -238,6 +238,13 @@ main {
   }
 }
 
+@media screen and (max-width: 450px) {
+  .main {
+    padding: 6em 0;
+    height: auto;
+  }
+}
+
 /* About Us Styles */
 
 .aboutus {
