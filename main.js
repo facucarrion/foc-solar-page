@@ -1,17 +1,3 @@
-// Parallax Effect
-
-const $contactBackground = document.getElementById('contact');
-const $contactForm = document.getElementById('contactspan');
-
-window.addEventListener('scroll', () => {
-
-  let offset = window.pageYOffset || document.documentElement.scrollTop;
-
-  $contactBackground.style.backgroundPositionY = '-' + offset * 0.04 + 'px';
-  $contactForm.style.marginBottom = offset * 0.6 + 'px';
-  
-});
-
 // Mailto
 
 const $form = document.querySelector('#contactspan');
@@ -108,3 +94,25 @@ window.onscroll = function () {
     buttonUpp.style.transform = "scale(0)";
   }
 };
+
+// Social Links Hover
+
+const facebookLink = document.getElementById('facelink');
+const facebookIcon = document.getElementById('faceicon');
+const igLink = document.getElementById('iglink');
+const igIcon = document.getElementById('igicon');
+
+const eventHover = (link, event, icon, color, transition) => {
+  link.addEventListener(event, () => {
+    icon.style.color = color;
+    if (transition == true) icon.style.transition = "color 350ms ease";
+  })
+}
+
+eventHover(facebookLink, 'mouseover', facebookIcon, "#3b5998", true);
+
+eventHover(facebookLink, 'mouseout', facebookIcon, "rgba(239, 239, 239, 0.6)", false)
+
+eventHover(igLink, 'mouseover', igIcon, "#e23ecc", true)
+
+eventHover(igLink, 'mouseout', igIcon, "rgba(239, 239, 239, 0.6)", false)
