@@ -4,7 +4,6 @@ const $form = document.querySelector('#contactspan');
 const $buttonMailto = document.querySelector('#mailto');
 
 $form.addEventListener('submit', handleSubmit);
-
 function handleSubmit(event) {
   event.preventDefault();
 
@@ -28,23 +27,12 @@ $btnOpen.addEventListener('click', () => {
   $menu.style.transform = 'scale(1, 1)';
   $menu.style.transformOrigin = 'right';
 });
-
 $btnClose.addEventListener('click', () => {
   $btnOpen.style.display = 'block';
   $btnClose.style.display = 'none';
   $menu.style.transform = 'scale(0, 1)';
   $menu.style.transformOrigin = 'right';
 });
-
-for(let i = 0; i < $menuArticle.length; i++) {
-  $menuArticle[i].addEventListener('click', () => {
-    $btnOpen.style.display = 'block';
-    $btnClose.style.display = 'none';
-    $menu.style.transform = 'scale(0, 1)';
-    $menu.style.transformOrigin = 'right';
-  })
-}
-
 window.onresize = () => {
   window.outerWidth <= 912 ? $menu.style.transform = 'scale(0, 1)' : $menu.style.transform = 'scale(1, 1)';
   $menu.style.transition = 'none';
@@ -55,43 +43,36 @@ window.onresize = () => {
 // Smooth Cursor
 
 $(document).ready(function () {
-  // Add smooth scrolling to all links
   $("a").on('click', function (event) {
     if (this.hash !== "") {
       event.preventDefault();
-
       const hash = this.hash;
       const hashWidth = document.querySelector(`.header`).scrollHeight;
-
       $('*').animate({
         scrollTop: $(hash).offset().top - hashWidth
       }, 700, function () {        
       });
-    }; // End if
+    };
   });
 });
 
 // Go Up Button
 
-document.getElementById("button-up").addEventListener("click", scrollUp);
+const $buttonUpp = document.getElementById("button-up");
 
+$buttonUpp.addEventListener("click", scrollUp);
 function scrollUp() {
   var currentScroll = document.documentElement.scrollTop;
-
   if (currentScroll > 0) {
     window.requestAnimationFrame(scrollUp);
     window.scrollTo(0, currentScroll - (currentScroll / 7.5));
     buttonUpp.style.transform = "scale(1)";
   }
 };
-
-buttonUpp = document.getElementById("button-up");
-
 window.onscroll = function () {
   let scroll = document.documentElement.scrollTop;
-
-  if (scroll > 200) buttonUpp.style.transform = "scale(1)";
-  else if (scroll < 100) buttonUpp.style.transform = "scale(0)";
+  if (scroll > 200) $buttonUpp.style.transform = "scale(1)";
+  else if (scroll < 100) $buttonUpp.style.transform = "scale(0)";
 };
 
 // Social Links Hover
@@ -100,7 +81,6 @@ const facebookLink = document.getElementById('facelink');
 const facebookIcon = document.getElementById('faceicon');
 const igLink = document.getElementById('iglink');
 const igIcon = document.getElementById('igicon');
-
 const eventHover = (link, event, icon, color, transition) => {
   link.addEventListener(event, () => {
     icon.style.color = color;
@@ -109,9 +89,6 @@ const eventHover = (link, event, icon, color, transition) => {
 }
 
 eventHover(facebookLink, 'mouseover', facebookIcon, "#3b5998", true);
-
 eventHover(facebookLink, 'mouseout', facebookIcon, "rgba(239, 239, 239, 0.6)", false)
-
 eventHover(igLink, 'mouseover', igIcon, "#e23ecc", true)
-
 eventHover(igLink, 'mouseout', igIcon, "rgba(239, 239, 239, 0.6)", false)
