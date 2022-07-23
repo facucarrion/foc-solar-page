@@ -19,6 +19,7 @@ function handleSubmit(event) {
 const $btnOpen = document.getElementById('open');
 const $btnClose = document.getElementById('close');
 const $menu = document.querySelector('.header__nav--menu');
+const $menuArticle = document.querySelectorAll('.header__nav--menu_articulo')
 
 $btnOpen.addEventListener('click', () => {
   $btnOpen.style.display = 'none';
@@ -39,6 +40,20 @@ window.onresize = () => {
   $btnOpen.style.display = 'block';
   $btnClose.style.display = 'none';
 };
+
+// for(let i = 0; i < $menuArticle.length; i++) {
+
+//   $menuArticle[i].addEventListener('click', () => {
+
+//     $btnOpen.style.display = 'block';
+//     $btnClose.style.display = 'none';
+//     $menu.style.transform = 'scale(0, 1)';
+//     $menu.style.transformOrigin = 'right';
+
+//   })
+
+// }
+
 
 // Smooth Cursor
 
