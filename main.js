@@ -22,6 +22,7 @@ const $menu = document.querySelector('.header__nav--menu');
 const $menuArticle = document.querySelectorAll('.header__nav--menu_articulo')
 
 $btnOpen.addEventListener('click', () => {
+  $menu.style.transition = "transform 0.3s ease-in-out";
   $btnOpen.style.display = 'none';
   $btnClose.style.display = 'block';
   $menu.style.transform = 'scale(1, 1)';
@@ -35,25 +36,21 @@ $btnClose.addEventListener('click', () => {
   $menu.style.transformOrigin = 'right';
 });
 
+for(let i = 0; i < $menuArticle.length; i++) {
+  $menuArticle[i].addEventListener('click', () => {
+    $btnOpen.style.display = 'block';
+    $btnClose.style.display = 'none';
+    $menu.style.transform = 'scale(0, 1)';
+    $menu.style.transformOrigin = 'right';
+  })
+}
+
 window.onresize = () => {
-  window.outerWidth < 900 ? $menu.style.transform = 'scale(0, 1)' : $menu.style.transform = 'scale(1, 1)';
+  window.outerWidth <= 912 ? $menu.style.transform = 'scale(0, 1)' : $menu.style.transform = 'scale(1, 1)';
+  $menu.style.transition = 'none';
   $btnOpen.style.display = 'block';
   $btnClose.style.display = 'none';
 };
-
-// for(let i = 0; i < $menuArticle.length; i++) {
-
-//   $menuArticle[i].addEventListener('click', () => {
-
-//     $btnOpen.style.display = 'block';
-//     $btnClose.style.display = 'none';
-//     $menu.style.transform = 'scale(0, 1)';
-//     $menu.style.transformOrigin = 'right';
-
-//   })
-
-// }
-
 
 // Smooth Cursor
 
