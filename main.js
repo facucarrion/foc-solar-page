@@ -1,9 +1,9 @@
-// Menu Responsive
+// Menu Responsive //
+
 const $btnOpen = document.getElementById('open');
 const $btnClose = document.getElementById('close');
 const $menu = document.querySelector('.header__nav--menu');
 const $menuArticle = document.querySelectorAll('.header__nav--menu_articulo');
-
 const openMenu = () => {
   $menu.style.transition = "transform 0.3s ease-in-out";
   $btnOpen.style.display = 'none';
@@ -21,9 +21,7 @@ const closeMenu = () => {
 // Resolution Check
 
 const checkResolution = () => {
-
   console.log(window.innerWidth);
-
   if (window.innerWidth <= 900) {
     closeMenu();
     for (let i = 0; i < $menuArticle.length; i++) {
@@ -36,11 +34,8 @@ const checkResolution = () => {
       $menuArticle[i].removeEventListener('click', closeMenu, true);
     };
   };
-
 };
-
 checkResolution();
-
 $btnOpen.addEventListener('click', () => {
   openMenu();
 });
@@ -52,7 +47,8 @@ window.onresize = () => {
   checkResolution();
 };
 
-// Smooth Cursor
+// Smooth Cursor //
+
 $(document).ready(function () {
   $("a").on('click', function (event) {
     if (this.hash !== "") {
@@ -67,10 +63,10 @@ $(document).ready(function () {
   });
 });
 
-// Go Up Button
+// Go Up Button //
+
 const $buttonUpp = document.getElementById("button-up");
 $buttonUpp.addEventListener("click", scrollUp());
-
 function scrollUp() {
   var currentScroll = document.documentElement.scrollTop;
   if (currentScroll > 0) {
@@ -85,10 +81,10 @@ window.onscroll = function() {
   else if (scroll < 100) $buttonUpp.style.transform = "scale(0)";
 };
 
-// Mailto
+// Mailto //
+
 const $form = document.querySelector('#contactspan');
 const $buttonMailto = document.querySelector('#mailto');
-
 $form.addEventListener('submit', handleSubmit);
 function handleSubmit(event) {
   event.preventDefault();
@@ -98,7 +94,8 @@ function handleSubmit(event) {
   $buttonMailto.click();
 };
 
-// Social Links Hover
+// Social Links Hover //
+
 const facebookLink = document.getElementById('facelink');
 const facebookIcon = document.getElementById('faceicon');
 const igLink = document.getElementById('iglink');
@@ -109,7 +106,6 @@ const eventHover = (link, event, icon, color, transition) => {
     if (transition == true) icon.style.transition = "color 350ms ease";
   });
 };
-
 eventHover(facebookLink, 'mouseover', facebookIcon, "#3b5998", true);
 eventHover(facebookLink, 'mouseout', facebookIcon, "rgba(239, 239, 239, 0.6)", false);
 eventHover(igLink, 'mouseover', igIcon, "#e23ecc", true);
