@@ -27,13 +27,13 @@ const checkResolution = () => {
   if (window.innerWidth <= 900) {
     closeMenu();
     for (let i = 0; i < $menuArticle.length; i++) {
-      $menuArticle[i].addEventListener('click', () => {closeMenu()}, true);
+      $menuArticle[i].addEventListener('click', closeMenu, true);
     };
   }
   else {
     openMenu();
     for (let i = 0; i < $menuArticle.length; i++) {
-      $menuArticle[i].removeEventListener('click', () => {closeMenu()}, true);
+      $menuArticle[i].removeEventListener('click', closeMenu, true);
     };
   };
 
