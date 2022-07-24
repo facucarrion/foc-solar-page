@@ -63,24 +63,6 @@ $(document).ready(function () {
   });
 });
 
-// Go Up Button //
-
-const $buttonUpp = document.getElementById("button-up");
-$buttonUpp.addEventListener("click", scrollUp());
-function scrollUp() {
-  var currentScroll = document.documentElement.scrollTop;
-  if (currentScroll > 0) {
-    window.requestAnimationFrame(scrollUp);
-    window.scrollTo(0, currentScroll - (currentScroll / 7.5));
-    $buttonUpp.style.transform = "scale(1)";
-  }
-};
-window.onscroll = function() {
-  let scroll = document.documentElement.scrollTop;
-  if (scroll > 200) $buttonUpp.style.transform = "scale(1)";
-  else if (scroll < 100) $buttonUpp.style.transform = "scale(0)";
-};
-
 // Mailto //
 
 const $form = document.querySelector('#contactspan');
