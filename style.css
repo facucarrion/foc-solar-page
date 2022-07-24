@@ -196,7 +196,7 @@ main {
 
 .aboutus__info--title {
   position: relative;
-  left: 7.5%;
+  left: 9%;
   display: inline-block;
   width: 40%;
   padding-bottom: 0.5em;
@@ -208,7 +208,7 @@ main {
 
 .aboutus__info--paragraph {
   position: relative;
-  left: 7.5%;
+  left: 9%;
   display: inline-block;
   width: 40%;
   height: auto;
@@ -227,7 +227,7 @@ main {
   flex-direction: column;
   place-items: center;
   justify-content: center;
-  gap: 3.5em;
+  gap: 3em;
 }
 
 .works__title {
@@ -306,6 +306,7 @@ main {
   text-align: center;
   color: transparent;
   width: 100%;
+  justify-content: center;
 }
 
 .works__description,
@@ -621,6 +622,7 @@ main {
   transition: all 300ms ease;
   -webkit-transform: scale(0);
   transform: scale(0);
+  z-index: 2000;
 }
 
 .button-up:hover {
@@ -686,7 +688,6 @@ main {
   .works__instalations {
     flex-wrap: wrap;
     gap: 2em;
-    align-items: space-evenly;
     justify-content: space-evenly;
   }
 
@@ -722,6 +723,11 @@ main {
 @media screen and (max-height: 820px) {
   .contact__container {
     height: 90%;
+  }
+
+  .button-up {
+    bottom: 10px;
+    left: 10px;
   }
 }
 
@@ -764,16 +770,42 @@ main {
   }
 }
 
+@media screen and (max-height: 660px) {
+  .contact {
+    height: 100vh;
+  }
+}
+
 @media screen and (max-width: 560px) {
 
   .footer {
     gap: 1em;
   }
 
+  .works__instalations {
+    width: 100%;
+    max-width: none;
+  }
+
+  .works__article {
+    max-width: 92%;
+    width: 100%;
+  }
+
+  .works__image {
+    width: 101%;
+    height: auto;
+    min-height: none;
+  }
+
   .footer__info,
   .footer__links {
     font-size: .8em;
     min-width: 200px;
+  }
+
+  .contact__container {
+    width: 92%;
   }
 }
 
@@ -798,8 +830,18 @@ main {
     gap: 1em;
     height: auto;
   }
+}
 
-  .works__instalations {
-    width: 90%;
+@media screen and (max-width: 350px) {
+  .main__container--title {
+    font-size: 2rem;
+  }
+
+  .aboutus {
+    height: auto;
+  }
+
+  .aboutus__info {
+    padding: 2.5em 0;
   }
 }
