@@ -274,9 +274,8 @@ main {
 }
 
 .works__image {
+  position: relative;
   height: 100%;
-  width: auto;
-  object-fit: scale-down;
 }
 
 .works__description {
@@ -285,7 +284,8 @@ main {
   z-index: 10;
   height: 26%;
   width: 100%;
-  background-color: #e6e6e6;
+  background-color: rgba(50, 50, 50, 0.6);
+  color: #efefef;
   padding: 1em;
 }
 
@@ -322,7 +322,6 @@ main {
 .works__article:hover>.works__description {
   height: 100%;
   gap: 1em;
-  background-color: rgba(50, 50, 50, 0.6);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -338,6 +337,26 @@ main {
 
 .works__article:hover>.works__imgcon>.works__image {
   transform: scale(1.05);
+}
+
+.works__link {
+  display: flex;
+  gap: .5em;
+  align-items: center;
+  text-decoration: none;
+  color: #353535;
+  padding: .1em .1em;
+  border-bottom: 2px solid transparent;
+  transition: all 400ms ease;
+}
+
+.works__link:hover {
+  border-bottom: 2px solid #3b5998;
+}
+
+.works__icon {
+  font-size: 1.3em;
+  color: #3b5998;
 }
 
 /* Contact Styles */
@@ -635,11 +654,10 @@ main {
   .main__container--conlogo {
     align-self: flex-start;
   }
-}
 
-@media screen and (max-width: 1285px) {
-  .works__description {
-    font-size: 1.1em;
+  .works__instalations,
+  .works__title {
+    width: 90%;
   }
 }
 
@@ -671,6 +689,10 @@ main {
     gap: 2em;
     align-items: space-evenly;
     justify-content: space-evenly;
+  }
+
+  .works__imgcon {
+    display: block;
   }
 }
 
