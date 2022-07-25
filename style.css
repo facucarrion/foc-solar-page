@@ -355,8 +355,10 @@ main {
 }
 
 .works__icon {
+  display: flex;
   font-size: 1.3em;
   color: #3b5998;
+  gap: .1em;
 }
 
 /* Contact Styles */
