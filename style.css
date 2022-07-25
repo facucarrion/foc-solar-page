@@ -43,6 +43,10 @@ body {
   /* scroll-behavior: smooth; */
 }
 
+html {
+  overflow-x: hidden;
+}
+
 main {
   width: auto;
 }
@@ -86,6 +90,7 @@ main {
 .header__nav--menu_articulo-a {
   font-family: 'Poppins', sans-serif;
   display: flex;
+  text-align: center;
   position: relative;
   color: white;
   text-decoration: none;
@@ -271,6 +276,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  line-height: 0;
 }
 
 .works__image {
@@ -462,7 +468,7 @@ main {
 }
 
 .contact__label-s_message {
-  bottom: .3em;
+  bottom: .9em;
 }
 
 .contact__input {
@@ -775,6 +781,11 @@ main {
 @media screen and (max-height: 820px) {
   .contact__container {
     height: 90%;
+    gap: .8em;
+  }
+
+  .contact__container .contact__span {
+    font-size: .6em;
   }
 
   .button-up {
@@ -826,6 +837,21 @@ main {
   .contact {
     height: 100vh;
   }
+
+  .header__nav {
+    height: 5em;
+    padding: 1em;
+  }
+
+  .header__nav--menu {
+    top: 5em;
+  }
+}
+
+@media screen and (max-height: 585px) {
+  .contact {
+    height: 110vh;
+  }
 }
 
 @media screen and (max-width: 560px) {
@@ -867,6 +893,15 @@ main {
     height: auto;
   }
 
+  .header__nav {
+    padding: 2em;
+  }
+
+  .header__nav--menu {
+    width: 55%;
+    padding: 0 .5em;
+  }
+
   .footer {
     gap: 1em;
   }
@@ -885,8 +920,17 @@ main {
 }
 
 @media screen and (max-width: 350px) {
-  .main__container--title {
+
+  .main__container--title,
+  .aboutus__info--title,
+  .works__title,
+  .contact__title {
     font-size: 2rem;
+  }
+
+  html {
+    overflow-x: hidden;
+    overflow-y: visible;
   }
 
   .aboutus {
