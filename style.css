@@ -628,7 +628,6 @@ main {
 }
 
 .button-up:hover {
-  -webkit-transform: scale(1.1);
   transform: scale(1.1);
   background-color: rgba(197, 102, 51, 0.8);
 }
