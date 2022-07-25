@@ -59,7 +59,6 @@ $formToValidate.addEventListener('submit', (e) => {
     setTimeout(() => {
       document.querySelector('.contact__sendcorrect').style.transform = "scale(0)"
     }, 5000);
-    $formToValidate.reset();
   }
   else {
     document.querySelector(".contact__sendcorrect").style.transform = "scale(0)";
