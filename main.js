@@ -21,7 +21,6 @@ const closeMenu = () => {
 // Resolution Check
 
 const checkResolution = () => {
-  console.log(window.innerWidth);
   if (window.innerWidth <= 900) {
     closeMenu();
     for (let i = 0; i < $menuArticle.length; i++) {
@@ -62,19 +61,6 @@ $(document).ready(function () {
     };
   });
 });
-
-// Mailto //
-
-const $form = document.querySelector('#contactspan');
-const $buttonMailto = document.querySelector('#mailto');
-$form.addEventListener('submit', handleSubmit);
-function handleSubmit(event) {
-  event.preventDefault();
-  const form = new FormData(this);
-
-  $buttonMailto.setAttribute('href', `mailto:focsolar@gmail.com?subject=${form.get('name')}&body=${form.get('message')}`);
-  $buttonMailto.click();
-};
 
 // Social Links Hover //
 

@@ -15,8 +15,9 @@
   <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
 
   <script src="https://kit.fontawesome.com/1913102483.js" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-  
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -27,17 +28,20 @@
       <img src="img/white_logo.png" alt="logo" class="header__nav--logo">
 
       <ul class="header__nav--menu">
-          <li class="header__nav--menu_articulo"><a href="#main" class="header__nav--menu_articulo-a">Introducción</a></li>
-          <li class="header__nav--menu_articulo"><a href="#aboutus" class="header__nav--menu_articulo-a">Sobre Nosotros</a></li>
-          <li class="header__nav--menu_articulo"><a href="#works" class="header__nav--menu_articulo-a">Nuestros Trabajos</a></li>
-          <li class="header__nav--menu_articulo"><a href="#contact" class="header__nav--menu_articulo-a">Contacto</a></li>
+        <li class="header__nav--menu_articulo"><a href="#main" class="header__nav--menu_articulo-a">Introducción</a>
+        </li>
+        <li class="header__nav--menu_articulo"><a href="#aboutus" class="header__nav--menu_articulo-a">Sobre
+            Nosotros</a></li>
+        <li class="header__nav--menu_articulo"><a href="#works" class="header__nav--menu_articulo-a">Nuestros
+            Trabajos</a></li>
+        <li class="header__nav--menu_articulo"><a href="#contact" class="header__nav--menu_articulo-a">Contacto</a></li>
       </ul>
 
       <div class="header__icons">
         <i class="fa-solid fa-bars" id="open"></i>
         <i class="fa-solid fa-xmark" id="close"></i>
       </div>
-    
+
     </nav>
 
   </header>
@@ -48,13 +52,16 @@
       <div class="main__container">
         <div class="main__container--conlogo">
           <img src="img/logo.png" alt="foc solar energia paneles" class="main__container--logo">
-        </div>  
+        </div>
         <div class="main__container--info">
           <h2 class="main__container--title">
             FOC Solar
           </h2>
           <p class="main__container--paragraph">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde, rerum voluptate? A eaque, fugiat delectus natus officia vitae. Aperiam totam voluptatem debitis ducimus. Magni inventore, ut minus quos commodi sapiente, maxime consectetur cupiditate, nostrum adipisci odio vel. Id delectus facilis totam sapiente quo facere provident, ab doloremque fugiat, amet ipsam!
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde, rerum voluptate? A eaque, fugiat delectus
+            natus officia vitae. Aperiam totam voluptatem debitis ducimus. Magni inventore, ut minus quos commodi
+            sapiente, maxime consectetur cupiditate, nostrum adipisci odio vel. Id delectus facilis totam sapiente quo
+            facere provident, ab doloremque fugiat, amet ipsam!
           </p>
         </div>
       </div>
@@ -66,7 +73,10 @@
           Sobre Nosotros
         </h2>
         <p class="aboutus__info--paragraph">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, illum numquam iusto enim maxime, quos delectus dolor laborum, a ex ducimus voluptatibus ipsam deleniti asperiores quisquam placeat molestiae rem beatae at aliquid magni. Perferendis ipsum voluptatum porro non optio, consequatur ex asperiores laudantium, necessitatibus voluptate exercitationem ullam est nam aspernatur!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, illum numquam iusto enim maxime, quos delectus
+          dolor laborum, a ex ducimus voluptatibus ipsam deleniti asperiores quisquam placeat molestiae rem beatae at
+          aliquid magni. Perferendis ipsum voluptatum porro non optio, consequatur ex asperiores laudantium,
+          necessitatibus voluptate exercitationem ullam est nam aspernatur!
         </p>
       </div>
     </section>
@@ -85,25 +95,27 @@
             <h2 class="works__secondtitle"">Instalación en Balsa</h2>
             <p class="works__paragraph">
               Lorem ipsum dolor sit amet consectetur.
-            </p>
-          </div>            
+              </p>
+          </div>
         </article>
 
         <article class="works__article">
           <div class="works__imgcon">
-            <img src="img/colectivo/vista1.png" class="works__image" alt="instalación solar casilla motorhome paneles solares">
+            <img src="img/colectivo/vista1.png" class="works__image"
+              alt="instalación solar casilla motorhome paneles solares">
           </div>
           <div class="works__description">
             <h2 class="works__secondtitle">Instalación en Motorhome</h2>
             <p class="works__paragraph">
               Lorem ipsum dolor sit amet consectetur.
             </p>
-          </div> 
+          </div>
         </article>
 
         <article class="works__article">
           <div class="works__imgcon">
-            <img src="img/valle-encantado/vista1.png" class="works__image" alt="instalación solar parque acuático piletas paneles solares">
+            <img src="img/valle-encantado/vista1.png" class="works__image"
+              alt="instalación solar parque acuático piletas paneles solares">
           </div>
           <div class="works__description">
             <h2 class="works__secondtitle">Instalación en parque</h2>
@@ -135,43 +147,58 @@
 
     <section class="contact" id="contact">
       <div class="contact__filter">
-        
-          <form class="contact__container" id="contactspan">
-            <h2 class="contact__title">
-              Contacto:
-            </h2>
+
+        <form class="contact__container" method="post" id="contactform" name="sendmail" netlify>
+          <h2 class="contact__title">
+            Contacto:
+          </h2>
+          
+          <div class="contact__contcontinput contname">
             <div class="contact__conteinput">
-              <input name="name" type="text" class="contact__input" id="name" autocomplete="new" required>
-              <label for="name" class="contact__label">
+              <input name="namee" type="text" class="contact__input" id="nameInput" autocomplete="new" required>
+              <label for="namee" class="contact__label">
                 <span class="contact__label-s">
                   Nombre
                 </span>
               </label>
             </div>
+            <p class="contact__correct">El nombre solo puede contener letras mayúsculas, minúsculas y con tilde. No símbolos ni números. Máximo 40 caracteres.</p>
+          </div>
 
+          <div class="contact__contcontinput contmail">
             <div class="contact__conteinput">
-              <input name="email" type="email" class="contact__input" id="email" autocomplete="new-email" required>
+              <input name="email" type="email" class="contact__input" id="emailInput" autocomplete="new-email" required>
               <label for="email" class="contact__label">
                 <span class="contact__label-s">
                   Correo Electrónico
                 </span>
               </label>
             </div>
-
+            <p class="contact__correct">El correo debe contener una @ y solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+          </div>
+          
+          <div class="contact__contcontinput contmen">
             <div class="contact__conteinput contact__conteinput--message">
-              <textarea name="message" class="contact__input--message" id="message" rows="5" autocomplete="off" required></textarea>
+              <textarea name="message" class="contact__input--message" id="messageInput" rows="5" autocomplete="off" required></textarea>
               <label for="message" class="contact__label contact__label--message">
                 <span class="contact__label-s contact__label-s_message">
                   Mensaje
                 </span>
               </label>
             </div>
+            <p class="contact__correct">El mensaje puede contener máximo 220 caracteres.</p>
+          </div>
+          
+          <span class="contact__span contact__senderror display__none">
+            <i class="fa-solid fa-exclamation"></i>Rellene correctamente el formulario.
+          </span>
+          <span class="contact__span contact__sendcorrect display__none">
+            <i class="fa-solid fa-check"></i>El formulario ha sido enviado correctamente
+          </span>
+          <input type="submit" value="Enviar" id="sendform" class="contact__submit">
+        </form>
 
-            <input type="submit" value="Enviar" class="contact__submit">
-            <a href="" target="_blank" id="mailto"></a>
-          </form>
-
-        </div>
+      </div>
     </section>
 
   </main>
@@ -204,14 +231,15 @@
           @focsolar
         </a>
         <a href="https://www.facebook.com/FOCSOLAR/" target="_blank" class="footer__link" id="facelink">
-          <div class="footer__conticons">  
+          <div class="footer__conticons">
             <i class="fa-solid fa-link footer__icon"></i>
             <i class="fa-brands fa-facebook footer__icon" id="faceicon"></i>
           </div>
           FOC SOLAR
         </a>
-        <a href="https://www.google.com.ar/maps/place/R%C3%ADo+Tercero,+C%C3%B3rdoba/@-32.1705733,-64.1408561,14z/data=!3m1!4b1!4m5!3m4!1s0x95cd6f24cc9b6e75:0xf31e908957e0133!8m2!3d-32.1766541!4d-64.1130995" target="_blank" class="footer__link">
-          
+        <a href="https://www.google.com.ar/maps/place/R%C3%ADo+Tercero,+C%C3%B3rdoba/@-32.1705733,-64.1408561,14z/data=!3m1!4b1!4m5!3m4!1s0x95cd6f24cc9b6e75:0xf31e908957e0133!8m2!3d-32.1766541!4d-64.1130995"
+          target="_blank" class="footer__link">
+
         </a>
       </div>
 
@@ -227,8 +255,9 @@
 
   </footer>
 
-  <script defer src="./main.js"></script>
+  <script src="./main.js"></script>
   <script src="./scrolltop.js" async></script>
+  <script src="./formvalidation.js"></script>
 
 </body>
 

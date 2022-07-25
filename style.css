@@ -405,6 +405,13 @@ main {
   gap: 3em;
 }
 
+.contact__contcontinput {
+  display: flex;
+  flex-direction: column;
+  gap: .2em;
+  color: rgba(255, 74, 74, 0.822);
+}
+
 .contact__conteinput {
   width: 100%;
   height: 3em;
@@ -499,6 +506,11 @@ main {
   transform: translateX(0);
 }
 
+.contact__icon {
+  position: absolute;
+  right: 0;
+}
+
 .contact__submit {
   position: absolute;
   bottom: 1.5em;
@@ -524,6 +536,45 @@ main {
 
 .contact__submit:active {
   outline: none;
+}
+
+.contact__input--correct {
+  color: #efefef;
+}
+
+.contact__input--incorrect {
+  color: rgba(255, 74, 74, 0.822);
+}
+
+.contact__error {
+  font-size: .8em;
+  display: block;
+}
+
+.contact__correct {
+  display: none;
+}
+
+.contact__container .contact__span {
+  position: absolute;
+  bottom: 2em;
+  left: 2em;
+  display: flex;
+  gap: 1em;
+  width: 15em;
+  transform: scale(0);
+}
+
+.contact__senderror {
+  color: rgba(255, 74, 74, 0.822);
+}
+
+.contact__sendcorrect {
+  color: rgba(115, 255, 115, .8);
+}
+
+.display__block {
+  transform: scale(1);
 }
 
 /* Footer Styles */
