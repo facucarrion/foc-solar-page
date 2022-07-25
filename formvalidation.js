@@ -54,12 +54,12 @@ $inputs.forEach((input) => {
 $formToValidate.addEventListener('submit', (e) => {
   e.preventDefault();
   if (places.nameInput && places.emailInput && places.messageInput) {
-    $formToValidate.reset();
     document.querySelector(".contact__senderror").style.transform = "scale(0)";
     document.querySelector('.contact__sendcorrect').style.transform = "scale(1)"
     setTimeout(() => {
       document.querySelector('.contact__sendcorrect').style.transform = "scale(0)"
     }, 5000);
+    $formToValidate.reset();
   }
   else {
     document.querySelector(".contact__sendcorrect").style.transform = "scale(0)";
