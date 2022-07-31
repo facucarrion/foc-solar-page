@@ -4,6 +4,10 @@
 
 :root {
   --primary-color: #f17d3e;
+  --secondary-color: #efefef;
+  --grey-color: #;
+  --opacity-grey-color: rgba(50, 50, 50, 0.7);
+  --incorrect-color: rgba(255, 74, 74, 0.822);
 }
 
 * {
@@ -24,7 +28,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #efefef;
+  background-color: var(--secondary-color);
 }
 
 /* @font-face {
@@ -103,12 +107,12 @@ main {
 }
 
 .header__nav--menu_articulo:hover {
-  border-bottom: 2px solid #efefef;
+  border-bottom: 2px solid var(--secondary-color);
 }
 
 .header__icons {
   font-size: 1.5em;
-  color: #efefef;
+  color: var(--secondary-color);
   cursor: pointer;
   display: none;
 }
@@ -119,7 +123,7 @@ main {
   position: relative;
   width: 100%;
   height: calc(100vh - 6.5em);
-  border-bottom: 2px solid #efefef;
+  border-bottom: 2px solid var(--secondary-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -194,7 +198,7 @@ main {
   position: relative;
   width: 100%;
   height: 100%;
-  background-color: rgba(50, 50, 50, 0.7);
+  background-color: var(--opacity-grey-color);
   flex-direction: column;
   justify-content: center;
 }
@@ -205,10 +209,10 @@ main {
   display: inline-block;
   width: 40%;
   padding-bottom: 0.5em;
-  color: #efefef;
+  color: var(--secondary-color);
   font-size: 2.25rem;
   font-weight: 600;
-  border-bottom: 2px solid #efefef;
+  border-bottom: 2px solid var(--secondary-color);
 }
 
 .aboutus__info--paragraph {
@@ -217,7 +221,7 @@ main {
   display: inline-block;
   width: 40%;
   height: auto;
-  color: #efefef;
+  color: var(--secondary-color);
   line-height: 2em;
   margin-top: 0.75em;
   font-weight: 300;
@@ -290,8 +294,8 @@ main {
   z-index: 10;
   height: 26%;
   width: 100%;
-  background-color: rgba(50, 50, 50, 0.6);
-  color: #efefef;
+  background-color: rgba(50, 50, 50, 0.65);
+  color: var(--secondary-color);
   padding: 1em;
 }
 
@@ -339,7 +343,7 @@ main {
 .works__article:hover>.works__description>.works__secondtitle,
 .works__article:hover>.works__description>.works__paragraph {
   height: auto;
-  color: #efefef;
+  color: var(--secondary-color);
 }
 
 .works__article:hover>.works__imgcon>.works__image {
@@ -385,7 +389,7 @@ main {
   position: relative;
   width: 100%;
   height: 100%;
-  background-color: rgba(50, 50, 50, 0.7);
+  background-color: var(--opacity-grey-color);
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -403,9 +407,9 @@ main {
   width: 70%;
   min-height: 70%;
   display: flex;
-  background-color: rgba(50, 50, 50, 0.8);
+  background-color: var(--opacity-grey-color);
   padding: 2em;
-  color: #efefef;
+  color: var(--secondary-color);
   flex-direction: column;
   justify-content: center;
   gap: 3em;
@@ -415,7 +419,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: .2em;
-  color: rgba(255, 74, 74, 0.822);
+  color: var(--incorrect-color);
 }
 
 .contact__conteinput {
@@ -438,7 +442,7 @@ main {
   width: 100%;
   height: 100%;
   pointer-events: none;
-  border-bottom: 1px solid #efefef;
+  border-bottom: 1px solid var(--secondary-color);
 
 }
 
@@ -464,7 +468,7 @@ main {
   bottom: 5px;
   left: 0;
   transition: all .3s ease;
-  color: #efefefbd;
+  color: var(--secondary-color);
 }
 
 .contact__label-s_message {
@@ -476,7 +480,7 @@ main {
   height: 3em;
   width: 100%;
   padding-top: 1em;
-  color: #efefef;
+  color: var(--secondary-color);
   border: none;
   outline: 0px;
 }
@@ -485,7 +489,7 @@ main {
   background: none;
   width: 100%;
   padding-top: 1em;
-  color: #efefef;
+  color: var(--secondary-color);
   border: none;
   outline: 0px;
   resize: none;
@@ -545,11 +549,11 @@ main {
 }
 
 .contact__input--correct {
-  color: #efefef;
+  color: var(--secondary-color);
 }
 
 .contact__input--incorrect {
-  color: rgba(255, 74, 74, 0.822);
+  color: var(--incorrect-color);
 }
 
 .contact__error {
@@ -572,7 +576,7 @@ main {
 }
 
 .contact__senderror {
-  color: rgba(255, 74, 74, 0.822);
+  color: var(--incorrect-color);
 }
 
 .contact__sendcorrect {
@@ -591,7 +595,7 @@ main {
   padding: 2em 0;
   width: 100%;
   background-color: #252525;
-  color: #efefef;
+  color: var(--secondary-color);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -605,7 +609,7 @@ main {
   width: 100%;
   padding: 0 .2em;
   padding-bottom: .2em;
-  border-bottom: 1px solid #efefef;
+  border-bottom: 1px solid var(--secondary-color);
   text-align: left;
 }
 
